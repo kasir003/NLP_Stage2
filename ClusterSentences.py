@@ -38,8 +38,8 @@ class ClusterSentences(object):
           assert numpy.allclose(contextvector,numpy.dot(U,numpy.dot(numpy.diag(s),v)))
           s[2:]=0
           new_result = numpy.dot(U,numpy.dot(numpy.diag(s),v))
-          result=linkage(contextvector,'ward')
-          clusters=fcluster(result,10,criterion='distance')
+          result=linkage(new_result,'ward')
+          clusters=fcluster(result,4,criterion='distance')
           print(clusters)
 
           ## Ploting dendrogram
