@@ -34,6 +34,10 @@ class ClusterSentences(object):
             return contextvector
 
     def GetClusters(self,contextvector):
+          U,s,v = svd(contextvector,full_matrices=False)
+          assert numpy.allclose(contextvector,numpy.dot(U,numpy.dot(numpy.diag(s),v)))
+          s[2:]=0
+          new_result = numpy.dot(U,numpy.dot(numpy.diag(s),v))
           result=linkage(contextvector,'ward')
           clusters=fcluster(result,10,criterion='distance')
           print(clusters)
