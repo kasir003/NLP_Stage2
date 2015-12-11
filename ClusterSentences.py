@@ -31,6 +31,7 @@ class ClusterSentences(object):
                         if dimension_words[y] in listofsent[x]:
                                 contextvector[x][y]=1
 
+            print(contextvector[0:5])
             return contextvector
 
     def GetClusters(self,contextvector):
@@ -68,3 +69,4 @@ class ClusterSentences(object):
           plt.show()
 
           return clusters
+    

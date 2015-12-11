@@ -36,7 +36,7 @@ class ReadInput(object):
             listofsentences=[]
             f=open(filename,'r')
             stop=set(stopwords.words('english'))
-            stop.update(['Mr','I','Mrs','could','would','must','upon'])
+            stop.update(['mr','i','mrs','could','would','must','upon','miss'])
             for line in f:
                 if '<head>' in line:
                     a=[word for word in nltk.word_tokenize(line) if word.lower() not in stop]
@@ -68,9 +68,9 @@ class ReadInput(object):
             for x in range(0,number_of_dimensions):
                 words_without_count.append(words_counts[x][0])
 
-##            print(words_without_count)
-##            for x in range(len(words_without_count)):
-##                words_without_count[x]=words_without_count[x].lower()
+##            print(words_without_count) for x in
+##            range(len(words_without_count)):
+##            words_without_count[x]=words_without_count[x].lower()
 ##                           
 ##            pos_tagged_words=pos_tag(words_without_count)
 ##
