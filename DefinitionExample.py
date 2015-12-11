@@ -40,11 +40,11 @@ class DefinitionExample(object):
         clusterinformation.append(c)
         
         
-                        return clusterinformation
+        return clusterinformation
 
 # picks the instance which has the most dimension words
-def PickExample(self,clusterinformation,contextvec):
-    result=[]
+    def PickExample(self,clusterinformation,contextvec):
+        result=[]
         for x in range(len(clusterinformation)):
             maxcount=0
             a=0
@@ -53,26 +53,26 @@ def PickExample(self,clusterinformation,contextvec):
                 if(count>maxcount):
                     maxcount=count
                     a=clusterinformation[x][y]
-    
-        result.append(a)
         
-    return result
-# returns the dimension words of each cluster to the Generate Definition class
-def GetWordsDefinition(self,clusterinformation,contextvec,dimensionwords):
-    wordsforeachcluster=[]
+            result.append(a)
+            
+        return result
+    # returns the dimension words of each cluster to the Generate Definition class
+    def GetWordsDefinition(self,clusterinformation,contextvec,dimensionwords):
+        wordsforeachcluster=[]
         for x in range(len(clusterinformation)):
             words=[]
             for y in range(len(clusterinformation[x])):
                 for z in range(len(contextvec[clusterinformation[x][y]])):
                     if(contextvec[clusterinformation[x][y]][z]==1):
                         words.append(dimensionwords[z])
-    
-        wordsforeachcluster.append(collections.Counter(words).most_common(25))
         
-    return wordsforeachcluster
-# Writes the definition and example of each word to single file
-def WriteDefinitionExample(self,exampleinstances,filename,targetword,sentence):
-    f=open(filename,'r')
+            wordsforeachcluster.append(collections.Counter(words).most_common(25))
+            
+        return wordsforeachcluster
+    # Writes the definition and example of each word to single file
+    def WriteDefinitionExample(self,exampleinstances,filename,targetword,sentence):
+        f=open(filename,'r')
         examplefilename=targetword+'-defintion_and_examplefile'
         f1=open(examplefilename,'w')
         count=-1
