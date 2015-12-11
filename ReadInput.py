@@ -58,7 +58,7 @@ class ReadInput(object):
             # So generate a set of words included in nltk.
             stop=set(stopwords.words('english'))
             # Adding some custom words
-            stop.update(['mr','i','mrs','could','would','must','upon','miss'])
+            stop.update(['mr','i','mrs','could','would','must','upon','miss,shall,O'])
 
             # Each sentence has a head tag, so look for that tag
             # then tokenize the sentence using nltk word_tokenize
