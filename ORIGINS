@@ -1,0 +1,17 @@
+******************************************************************************************
+		UMDuluth-Team-ROME-Cluster words based on context
+******************************************************************************************
+
+We have used the following 3rd party libraries:
+
+1) nltk
+
+   This is a natural language toolkit available in python. We use this to get custom stop words available. Also it is used to tokenize 	   sentences. We have also used the pos_tag available in nltk.
+
+2) scipy
+
+   This is a toolkit available in python. We have used it for hierarchical clustering and Singular Value Decomposition. It has inbuit functions available for it.
+
+3) numpy
+
+   It stands for numerical python. It is used to get matrices in python. We are using it for matrices.

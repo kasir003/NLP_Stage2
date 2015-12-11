@@ -1,5 +1,5 @@
 # Author : Vamsidhar Kasireddy 
-# Team : ROME
+# Team : Rome
 #  
 # This class generates the definition for different senses of the word and return the definitions in a list to the DefinitionExample Class. 
 # It generates definition based on Context free grammar rules added in this program.

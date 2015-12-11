@@ -1,3 +1,5 @@
+# Author : Nirav Sharda
+# Team : Rome
 # This class is used to read the input file from the user and
 # pre-process it for further use. It create a list of words in
 # each sentences and then removes stop words and punctuation

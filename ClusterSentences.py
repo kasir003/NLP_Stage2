@@ -1,3 +1,5 @@
+# Author : Nirav Sharda
+# Team : Rome
 # This class generates the context vectors for each sentence
 # and then uses scipy toolkit available in python to cluster
 # those context vectors. We use the idea of local context

@@ -225,14 +225,34 @@ S5 = lines.text
 _________________________________________________________________________________________
 _________________________________________________________________________________________ 
 
+pmss-noun-4senses.txt
+
+S2	      S3	      S1	      S0	   TOTAL	
+  C0:     1340	     559	     952	     953	    3804	(38.04)
+  C1:      432	     747	     506	     530	    2215	(22.15)
+  C2:      269	     523	     502	     446	    1740	(17.40)
+  C3:      426	     138	     483	     496	    1543	(15.43)
+  C4:*      33	     533	      57	      75	     698	(6.98)
+ TOTAL    2500	    2500	    2500	    2500	   10000
+         (25.00)   (25.00)   (25.00)   (25.00)
+Precision = 33.16(3085/9302)
+Recall = 30.85(3085/10000+0)
+F-Measure = 31.97
+
+Legend of Sense Tags
+S0 = P_M_S_S.MURDERERS
+S1 = P_M_S_S.PLAINTIFF
+S2 = P_M_S_S.SKELETON
+S3 = P_M_S_S.STRONGMAN
+
 -------------------------------
 BEST WORD BASED ON PERFORMANCE
 -------------------------------
 
-The best preforming word based on precision scores is the verb believe (57.29%) and the best result for name conflate are for the words whale and night (60.84).
+The best preforming word based on precision scores is the verb believe (58.02%) and the best result for name conflate are for the words priest and heaven (76.73).
 
 -------------------------------
 WORST WORD BASED ON PERFORMANCE
 -------------------------------
 
-The worst performing word based on precision scores is the noun idea (35%) and the worst result for name conflate are for the words women and friend (52.57).
+The worst performing word based on precision scores is the noun lines (22.94%) and the worst result for name conflate are for the words women and friend (65.10%).

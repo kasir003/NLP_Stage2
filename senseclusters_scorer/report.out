@@ -1,15 +1,17 @@
-            S2	      S0	      S1	   TOTAL	
-  C0:        0	      15	       1	      16	(14.55)
-  C2:        2	      37	       8	      47	(42.73)
-  C3:        3	      22	       5	      30	(27.27)
-  C1:*       0	      17	       0	      17	(15.45)
- TOTAL       5	      91	      14	     110
-         (4.55)   (82.73)   (12.73)
-Precision = 45.16(42/93)
-Recall = 38.18(42/110+0)
-F-Measure = 41.38
+            S2	      S3	      S1	      S0	   TOTAL	
+  C0:     1340	     559	     952	     953	    3804	(38.04)
+  C1:      432	     747	     506	     530	    2215	(22.15)
+  C2:      269	     523	     502	     446	    1740	(17.40)
+  C3:      426	     138	     483	     496	    1543	(15.43)
+  C4:*      33	     533	      57	      75	     698	(6.98)
+ TOTAL    2500	    2500	    2500	    2500	   10000
+         (25.00)   (25.00)   (25.00)   (25.00)
+Precision = 33.16(3085/9302)
+Recall = 30.85(3085/10000+0)
+F-Measure = 31.97
 
 Legend of Sense Tags
-S0 = God.Supreme_Power
-S1 = God.a
-S2 = God.idol_graven
+S0 = P_M_S_S.MURDERERS
+S1 = P_M_S_S.PLAINTIFF
+S2 = P_M_S_S.SKELETON
+S3 = P_M_S_S.STRONGMAN
