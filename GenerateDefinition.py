@@ -53,10 +53,12 @@ class GenerateDefinition(object):
                            if((poswords[index][x][1]=='VBP')or(poswords[index][x][1]=='VBD')or(poswords[index][x][1]=='VB')or(poswords[index][x][1]=='RB')or(poswords[index][x][1]=='VBG')or(poswords[index][x][1]=='RBR')):
                                e.append(poswords[index][x][0])
             noun.append(d)
-            verb.append(e)
+            if(len(e)==0):
+                verb.append(d)
+            else:
+                verb.append(e)
 
-            if(len(verb)==0):
-                verb.append(noun)
+        print(verb)
         return noun,verb
     # function sets the CFG RULES based on which sentences are generated
     def prod_rule(self,left,right):
@@ -85,6 +87,7 @@ class GenerateDefinition(object):
         for x in range(len(noun)):
             nounlist.append(noun[x][0])
         for x in range(len(verb)):
+            print(x)
             verblist.append(verb[x][0])
         # appends the sentences representing the clusters
         for x in range(len(nounlist)):
