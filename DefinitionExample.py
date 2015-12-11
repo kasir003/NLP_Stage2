@@ -30,13 +30,17 @@ class DefinitionExample(object):
     
     # generates the cluster information based on context vectors
     def ClusterInstances(self,clusters,contextvec):
+        # Create an empty list for storing result
         clusterinformation=[]
+        # go through all possible cluster numbers
         for x in range(1,max(clusters)+1):
             c=[]
+            # go through the list of all cluster numbers
             for y in range(len(clusters)):
+                # if match is found add to the list for xth cluster
                 if(clusters[y]==x):
                     c.append(y)
-            
+        # Add results for all clusters
         clusterinformation.append(c)
         
         
@@ -44,10 +48,15 @@ class DefinitionExample(object):
 
 # picks the instance which has the most dimension words
     def PickExample(self,clusterinformation,contextvec):
+        # An empty list for stroing instances
         result=[]
         for x in range(len(clusterinformation)):
+            # Maxcount and a are initialized to 0.
             maxcount=0
             a=0
+            # Go through all the context vectors for each cluster
+            # and pick the one with highest 1's i.e most
+            # dimension words present.
             for y in range(len(clusterinformation[x])):
                 count=list(contextvec[y]).count(1)
                 if(count>maxcount):
@@ -59,21 +68,25 @@ class DefinitionExample(object):
         return result
     # returns the dimension words of each cluster to the Generate Definition class
     def GetWordsDefinition(self,clusterinformation,contextvec,dimensionwords):
+        # An empty list for storing result
         wordsforeachcluster=[]
+        # For each cluster generate a list of all words in all sentences
+        # that are part of that cluster
         for x in range(len(clusterinformation)):
             words=[]
             for y in range(len(clusterinformation[x])):
                 for z in range(len(contextvec[clusterinformation[x][y]])):
                     if(contextvec[clusterinformation[x][y]][z]==1):
                         words.append(dimensionwords[z])
-        
+            # pick the top 25 words out of all words as the words to generate
+            # the definition for that cluster
             wordsforeachcluster.append(collections.Counter(words).most_common(25))
             
         return wordsforeachcluster
     # Writes the definition and example of each word to single file
     def WriteDefinitionExample(self,exampleinstances,filename,targetword,sentence):
         f=open(filename,'r')
-        examplefilename='./outputfiles/'+targetword+'-defintion_and_examplefile'
+        examplefilename=targetword+'-defintion_and_examplefile'
         f1=open(examplefilename,'w')
         count=-1
         for line in f:
@@ -86,7 +99,6 @@ class DefinitionExample(object):
                     f1.write('Example is: \n')
                     f1.write(line)
                     f1.write('\n')
-
 
 
 
