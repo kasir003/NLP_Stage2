@@ -1,0 +1,27 @@
+Author:
+
+################
+ FINAL METHOD
+################
+---------------------------------------------------------------------------
+In Final stage of project the idea for clustering sentences is as follows :
+---------------------------------------------------------------------------
+The Idea is to cluster the sentences based on the local context vectors rather than the global context vectors. To Identify the clusters we are considering the words, which are selected based on number of occurances in the local context.This top  words act as dimensions(will be called dimension words in the rest of document) for generating the local context vectors for every instance of the file. As the generated vector matrix can be very sparse , Singular Value Decomposition is used to reduce the dimensionality of the context vector matrix . The resultant vector matrix from SVD is thus clustered using Hierarchical Clustering approach which inturn uses the Ward's minimum variance method to calculate the distance between the vectors.
+
+System extracts the instances from the input file, looks for word based on which the instances should be clustered. System tokenizes all the instances , removes all the punctuations and stop words from the instances.System then counts every remaining word's occurence , picks the words which have maximum count and saves into a list, it looks for the target word in list and removes if it has the word. Once the list with top words is generated, the system then generates Boolean vectors with top words as dimensions.
+
+Once the context vectors are generated, singular value decomposition factorizes the sparse context vector matrix and generates a new matrix. Which then is clustered based on Ward's minimum variance method.
+
+-----------------------------------------------------
+For Generating the Defintion the idea is as follows :
+-----------------------------------------------------
+The Idea is to generate the definition based on the top dimension words which are generated as part of context vectors and use context free grammar rules to generate the sentences. Once the system receives dimension words it identifies the nouns and verbs which are most frequent and generates sentences using Context Free Grammar Rules.
+
+
+-------------------------------------------------
+For Selecting the example the idea is as follows:
+-------------------------------------------------
+Once the system creates clusters of the instances of the input file, we select the example based on the dimension words and the instances which are part of the clusters. System looks for the dimension words in every instance of the every cluster, it then selects instance in every cluster which has the highest dimension words in it and generates it as the example for the cluster from which the instance is selected.
+
+
+
