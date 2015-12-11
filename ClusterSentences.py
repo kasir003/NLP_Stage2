@@ -49,7 +49,7 @@ class ClusterSentences(object):
             return contextvector
 
     # This function generates the clusters
-    def GetClusters(self,contextvector):
+    def GetClusters(self,contextvector,number_of_sentences):
 
           # Adding scipy singular value decomposition
           U,s,v = svd(contextvector,full_matrices=False)
@@ -66,33 +66,11 @@ class ClusterSentences(object):
           # The threshold is selected from the dendrogram
           # Code for plotting the dendrogram has been removed
           # The criterion used is distance
-          clusters=fcluster(result,4,criterion='distance')
-          print(clusters)
-
-          ## Ploting dendrogram
-          plt.figure(figsize=(25, 10))
-          plt.title('Hierarchical Clustering Dendrogram')
-          plt.xlabel('sample index')
-          plt.ylabel('distance')
-          dendrogram(
-            result,
-            leaf_rotation=90.,  # rotates the x axis labels
-            leaf_font_size=8.,  # font size for the x axis labels
-          )
-          plt.show()
-
-          plt.title('Hierarchical Clustering Dendrogram (truncated)')
-          plt.xlabel('sample index or (cluster size)')
-          plt.ylabel('distance')
-          dendrogram(
-            result,
-            truncate_mode='lastp',  # show only the last p merged clusters
-            p=12,  # show only the last p merged clusters
-            leaf_rotation=90.,
-            leaf_font_size=12.,
-            show_contracted=True,  # to get a distribution impression in truncated branches
-          )
-          plt.show()
-
+          if(number_of_sentences<300):
+              threshold=4
+          else:
+              threshold=10    
+              
+          clusters=fcluster(result,threshold,criterion='distance')
           return clusters
     

@@ -12,7 +12,7 @@ def main():
     clustersentences=ClusterSentences()
     writeinputoutputkey=WriteInputOutputKey()
     definitionexample=DefinitionExample()
-    filename='inputfiles/manner-noun-shard014.xml'
+    filename='inputfiles/whale-night-shard014-1.xml'
     count=readinput.GetNumberOfSentences(filename)
     list1=readinput.GetWordsFromSentences(filename)
     indexes=readinput.GetIndexOfTargetWord(list1)
@@ -20,7 +20,7 @@ def main():
     dimensionwords=readinput.GetFeatureWords(list1,targetword,200)
     listwithouttargetword=clustersentences.RemoveTargetWord(list1,indexes)
     contextvec=clustersentences.GetLocalContextVector(listwithouttargetword,dimensionwords,count)
-    clusters=clustersentences.GetClusters(contextvec)
+    clusters=clustersentences.GetClusters(contextvec,count)
     writeinputoutputkey.WriteOutput(clusters,targetword)
     writeinputoutputkey.WriteInput(filename,targetword)
     clusterinfo=definitionexample.ClusterInstances(clusters,contextvec)
