@@ -61,11 +61,8 @@ class DefinitionExample(object):
                     if(contextvec[clusterinformation[x][y]][z]==1):
                         words.append(dimensionwords[z])
     
-        wordsforeachcluster.append(collections.Counter(words).most_common(15))
+            wordsforeachcluster.append(collections.Counter(words).most_common(15))
         
-        print(wordsforeachcluster[0])
-        print(wordsforeachcluster[1])
-
         return wordsforeachcluster
 
 
