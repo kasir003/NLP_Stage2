@@ -110,7 +110,6 @@ class ReadInput(object):
             words_counts=counts.most_common(number_of_dimensions)
             # List for storing words without counts
             words_without_count=[]
-            dimension_words=[]
             for x in range(0,number_of_dimensions):
                 words_without_count.append(words_counts[x][0])
                            
