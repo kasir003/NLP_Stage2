@@ -54,6 +54,9 @@ class GenerateDefinition(object):
                                e.append(poswords[index][x][0])
             noun.append(d)
             verb.append(e)
+
+            if(len(verb)==0):
+                verb.append(noun)
         return noun,verb
     # function sets the CFG RULES based on which sentences are generated
     def prod_rule(self,left,right):

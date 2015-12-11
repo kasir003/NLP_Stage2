@@ -40,7 +40,7 @@ class ClusterSentences(object):
             # and the columns represent dimension_words.
             contextvector=numpy.zeros((number_of_sentences,len(dimension_words)), dtype=int)
             # Check if the dimension word exists in the current sentence and if it is
-            # present represent is by a 1 in the matrix.
+            # present represent is by a 1 in the matrix./Users/vamsinsu/Documents/NLP_Stage2/GenerateDefinition.py
             for x in range(number_of_sentences):
                 for y in range(len(dimension_words)):
                         if dimension_words[y] in listofsent[x]:
