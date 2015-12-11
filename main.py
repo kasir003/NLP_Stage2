@@ -3,6 +3,7 @@ from ReadInput import ReadInput
 from ClusterSentences import ClusterSentences
 from WriteInputOutputKey import WriteInputOutputKey
 from DefinitionExample import DefinitionExample
+from GenerateDefinition import GenerateDefinition
 
 
 def main():
@@ -12,6 +13,7 @@ def main():
     clustersentences=ClusterSentences()
     writeinputoutputkey=WriteInputOutputKey()
     definitionexample=DefinitionExample()
+    generatedefinition= GenerateDefinition()
     filename='inputfiles/live-verb-shard014.xml'
     count=readinput.GetNumberOfSentences(filename)
     list1=readinput.GetWordsFromSentences(filename)
@@ -28,8 +30,8 @@ def main():
     exampleids=definitionexample.PickExample(clusterinfo,contextvec)
     print(exampleids)
     wordsforeachcluster=definitionexample.GetWordsDefinition(clusterinfo,contextvec,dimensionwords)
-    noun,verb=definitionexample.PosTagWords(wordsforeachcluster)
-    sentence=definitionexample.WriteDefinition(noun,verb)
+    noun,verb=generatedefinition.PosTagWords(wordsforeachcluster)
+    sentence=generatedefinition.WriteDefinition(noun,verb)
     definitionexample.WriteDefinitionExample(exampleids,filename,targetword,sentence)
 #The main function is called 
 if __name__ == "__main__":
