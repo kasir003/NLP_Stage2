@@ -9,8 +9,9 @@ INPUTFILE='./inputfiles/God-Noun-chime006-1.xml'
 # Variable to store location of senseclusterscorer.sh
 SENSE_CLUSTERS_SCORER_LOCATION='./senseclusters_scorer'
 
-python3 main.py -i $INPUTFILE 
-#python3 main.py -n $INPUTFILE -o $OUTPUTFILE -k1 $TARGET_WORD1 -k2 $TARGET_WORD2
+# python3 command line argument
+python3 main.py -i $INPUTFILE
+
 
 
 # move key files to sensecluster scorer location
