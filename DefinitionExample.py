@@ -51,6 +51,24 @@ class DefinitionExample(object):
                     f1.write(line)
                     f1.write('\n')
 
+    def GetWordsDefinition(self,clusterinformation,contextvec,dimensionwords):
+        wordsforeachcluster=[]
+        for x in range(len(clusterinformation)):
+            words=[]
+            for y in range(len(clusterinformation[x])):
+                for z in range(len(contextvec[clusterinformation[x][y]])):
+                    if(contextvec[clusterinformation[x][y]][z]==1):
+                        words.append(dimensionwords[z])
+    
+        wordsforeachcluster.append(collections.Counter(words).most_common(15))
+        
+        print(wordsforeachcluster[0])
+        print(wordsforeachcluster[1])
 
-                    
+        return wordsforeachcluster
+
+
+
+
+
             
