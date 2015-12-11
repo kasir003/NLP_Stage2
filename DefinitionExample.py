@@ -1,4 +1,5 @@
 import sys
+import collections
 
 class DefinitionExample(object):
 
