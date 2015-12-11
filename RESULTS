@@ -28,7 +28,7 @@ Once we have the all instances that are in a cluster, we look at number of dimen
 -------------------------
 Performance of All Words:
 -------------------------
-ive-verb-shard014
+live-verb-shard014
 
         S1	      S2	      S0	   TOTAL	
   C0:       20	       8	      20	      48	(48.00)
@@ -245,11 +245,46 @@ S1 = P_M_S_S.PLAINTIFF
 S2 = P_M_S_S.SKELETON
 S3 = P_M_S_S.STRONGMAN
 
+--------------------------------------------------------
+F-MEASURE - STAGE 2 METHOD vs MOST FREQUENT SENSE BASELINE
+--------------------------------------------------------
+
+**************************************************************************************************************
+WORD                            STAGE2                            MOST FREQUENT SENSE BASELINE
+**************************************************************************************************************
+believe                           58.02                                     59
+
+God                               45.65                                     82.73
+
+
+live                              50.54                                     51.00
+
+
+manner                            55.29                                     52.00
+
+
+tell                              41.58                                     39.60
+
+
+idea                              47.00                                     59.00
+
+
+whale-night                       69.44                                     61.93
+
+
+women-friend                      65.10                                     50.62
+
+
+priest-heaven                     54.20                                     50.00
+
+lines-6senses                     22.94                                     53.47
+
+pmss-10k lines			  33.16			                    25.00
 -------------------------------
 BEST WORD BASED ON PERFORMANCE
 -------------------------------
 
-The best preforming word based on precision scores is the verb believe (58.02%) and the best result for name conflate are for the words priest and heaven (76.73).
+The best preforming word based on precision scores is the verb believe (58.02%) and the best result for name conflate are for the words priest and heaven (76.73%).
 
 -------------------------------
 WORST WORD BASED ON PERFORMANCE
