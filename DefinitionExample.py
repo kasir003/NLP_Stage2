@@ -73,7 +73,7 @@ class DefinitionExample(object):
     # Writes the definition and example of each word to single file
     def WriteDefinitionExample(self,exampleinstances,filename,targetword,sentence):
         f=open(filename,'r')
-        examplefilename=targetword+'-defintion_and_examplefile'
+        examplefilename='./outputfiles/'+targetword+'-defintion_and_examplefile'
         f1=open(examplefilename,'w')
         count=-1
         for line in f:

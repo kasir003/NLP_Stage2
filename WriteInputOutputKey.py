@@ -12,7 +12,7 @@ class WriteInputOutputKey(object):
     # (word, word.instance, word.sense)
     def WriteInput(self,filename,targetword):
         # A variable to generate a filename based on targetword
-        outputfilename=targetword+'inputkeyfile.key'
+        outputfilename='inputkey.key'
         # Open the input file
         f=open(filename,'r')
         f1=open(outputfilename,'w')
@@ -33,7 +33,7 @@ class WriteInputOutputKey(object):
     # Format is <word, word.instance, word.senseidentified>
     def WriteOutput(self,clusters,targetword):
         # Create a filename based on target word
-    	filename=targetword+'outputkeyfile.key'
+    	filename='outputkey.key'
         # open that file
     	f=open(filename,'w')
     	# Write the instance and the cluster id based on our output

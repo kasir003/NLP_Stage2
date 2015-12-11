@@ -1,0 +1,15 @@
+            S1	      S0	      S2	   TOTAL	
+  C0:        6	      25	       1	      32	(29.09)
+  C1:        1	      27	       0	      28	(25.45)
+  C3:        5	      22	       3	      30	(27.27)
+  C2:*       2	      17	       1	      20	(18.18)
+ TOTAL      14	      91	       5	     110
+         (12.73)   (82.73)   (4.55)
+Precision = 40.00(36/90)
+Recall = 32.73(36/110+0)
+F-Measure = 36.00
+
+Legend of Sense Tags
+S0 = God.Supreme_Power
+S1 = God.a
+S2 = God.idol_graven
