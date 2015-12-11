@@ -107,7 +107,6 @@ class DefinitionExample(object):
         nounlist=[]
         verblist=[]
         sentence=[]
-        print(verb)
         for x in range(len(noun)):
             nounlist.append(noun[x][0])
         for x in range(len(verb)):
@@ -122,7 +121,6 @@ class DefinitionExample(object):
             self.prod_rule('N', nounlist[x])
             self.prod_rule('V', verblist[x])
             sentence.append(self.random_sent('S'))
-        print(sentence)
 
         return sentence
 
