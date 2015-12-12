@@ -1,6 +1,5 @@
 ClusterID -> SenseID
-C0 -> P_M_S_S.SKELETON
-C1 -> P_M_S_S.STRONGMAN
-C2 -> P_M_S_S.PLAINTIFF
-C3 -> P_M_S_S.MURDERERS
-Score = 30.85
+C0 -> idea.1
+C1 -> idea.2
+C2 -> idea.3
+Score = 46.00

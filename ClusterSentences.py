@@ -74,5 +74,7 @@ class ClusterSentences(object):
               threshold=10    
               
           clusters=fcluster(result,threshold,criterion='distance')
+
+          print(clusters)
           return clusters
     

@@ -41,9 +41,8 @@ class DefinitionExample(object):
                 if(clusters[y]==x):
                     c.append(y)
         # Add results for all clusters
-        clusterinformation.append(c)
-        
-        
+            clusterinformation.append(c)
+
         return clusterinformation
 
 # picks the instance which has the most dimension words
@@ -64,7 +63,7 @@ class DefinitionExample(object):
                     a=clusterinformation[x][y]
         
             result.append(a)
-            
+
         return result
     # returns the dimension words of each cluster to the Generate Definition class
     def GetWordsDefinition(self,clusterinformation,contextvec,dimensionwords):
@@ -86,8 +85,9 @@ class DefinitionExample(object):
     # Writes the definition and example of each word to single file
     def WriteDefinitionExample(self,exampleinstances,filename,targetword,sentence):
         f=open(filename,'r')
-        examplefilename=targetword+'-defintion_and_examplefile'
+        examplefilename='./outputfiles/'+targetword+'-defintion_and_examplefile'
         f1=open(examplefilename,'w')
+        print(exampleinstances)
         count=-1
         for line in f:
             if '<head>' in line:

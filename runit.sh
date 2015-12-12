@@ -3,7 +3,7 @@
 #!/bin/sh
 
 # Variable to store input file
-INPUTFILE='./inputfiles/pmss-noun-4senses.txt'
+INPUTFILE='./inputfiles/idea-noun-kasir003.xml'
 
 
 # Variable to store location of senseclusterscorer.sh
